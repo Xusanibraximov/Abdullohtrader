@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abdulloh Trader — BTC/ETH Education & Mentorship</title>
+  <meta name="description" content="Abdulloh Trader — BTC/ETH trader. Risk-managed education, mentorship, and community." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- ANIMATED BACKGROUND (Fixed to viewport) -->
+  <div class="hero-bg">
+    <div class="trading-chart"></div>
+    <svg class="chart-lines" viewBox="0 0 1200 600" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(225,75,99,.1);stop-opacity:0" />
+          <stop offset="50%" style="stop-color:rgba(127,178,255,.3);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:rgba(225,75,99,.1);stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      <polyline points="0,300 150,280 300,320 450,250 600,310 750,200 900,290 1050,180 1200,270" fill="none" stroke="url(#lineGrad)" stroke-width="2" class="chart-line" />
+      <polyline points="0,350 150,330 300,370 450,300 600,360 750,250 900,340 1050,230 1200,320" fill="none" stroke="url(#lineGrad)" stroke-width="2" class="chart-line chart-line-2" />
+    </svg>
+    
+    <!-- Floating Crypto Icons -->
+    <div class="floating-cryptos">
+      <div class="crypto-icon crypto-btc">₿</div>
+      <div class="crypto-icon crypto-eth">Ξ</div>
+      <div class="crypto-icon crypto-usdt">₮</div>
+      <div class="crypto-icon crypto-bnb">Ⓑ</div>
+      <div class="crypto-icon crypto-xrp">✕</div>
+      <div class="crypto-icon crypto-ada">₳</div>
+    </div>
+
+    <!-- Floating Profit/Loss Badges -->
+    <div class="profit-badges">
+      <div class="badge badge--gain badge-1">+12.5%</div>
+      <div class="badge badge--gain badge-2">+8.3%</div>
+      <div class="badge badge--loss badge-3">-2.1%</div>
+      <div class="badge badge--gain badge-4">+15.7%</div>
+      <div class="badge badge--loss badge-5">-4.2%</div>
+      <div class="badge badge--gain badge-6">+9.8%</div>
+    </div>
+
+    <!-- Grid Pattern -->
+    <div class="grid-pattern"></div>
+  </div>
+
+  <!-- Top bar -->
+  <header class="top">
+    <div class="container top__in">
+      <a class="logo" href="#top">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">ABDULLOH TRADER</span>
+      </a>
+
+      <div class="lang-picker" id="langPicker">
+        <button class="lang-toggle" id="langToggle" aria-label="Change language" aria-haspopup="true">
+          <span class="lang-code">EN</span>
+          <span class="lang-icon">🌐</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown" aria-hidden="true">
+          <button class="lang-option" data-lang="en">
+            <span class="flag">EN</span>
+            <span class="lang-text">English</span>
+          </button>
+          <button class="lang-option" data-lang="ru">
+            <span class="flag">🇷🇺</span>
+            <span class="lang-text">Русский</span>
+          </button>
+          <button class="lang-option" data-lang="uz">
+            <span class="flag">🇺🇿</span>
+            <span class="lang-text">O'zbek</span>
+          </button>
+        </div>
+      </div>
+
+      <button class="burger" id="openMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay menu (SanchoTrader like) -->
+  <aside class="menu" id="menu" aria-hidden="true">
+    <div class="menu__head">
+      <div class="menu__brand">
+        <span class="logo__mark">A</span>
+        <span class="logo__text">ABDULLOH TRADER</span>
+      </div>
+      <button class="menu__close" id="closeMenu" aria-label="Close menu">✕</button>
+    </div>
+
+    <div class="menu__cols">
+      <div class="menu__col">
+        <div class="menu__title">Education</div>
+        <a class="menu__link" href="#format">Format</a>
+        <a class="menu__link" href="#program">Program</a>
+        <a class="menu__link" href="#pricing">Plans</a>
+        <a class="menu__link" href="#faq">FAQ</a>
+      </div>
+
+      <div class="menu__col">
+        <div class="menu__title">Media</div>
+        <a class="menu__link" href="#contact">Telegram</a>
+        <a class="menu__link" href="#contact">YouTube</a>
+        <a class="menu__link" href="#contact">Instagram</a>
+      </div>
+
+      <div class="menu__col">
+        <div class="menu__title">Contacts</div>
+        <a class="menu__link" href="#contact">Contact</a>
+        <a class="menu__link" href="#reviews">Reviews</a>
+      </div>
+    </div>
+
+    <div class="menu__footer">
+      <div class="menu__big">Learn continuously, grow endlessly.</div>
+      <div class="menu__small">© Abdulloh Trader, 2026. All rights reserved.</div>
+    </div>
+  </aside>
+
+  <main id="top">
+    <!-- HERO (no background div) -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__left">
+            <h1 class="h1">
+              Trading that
+              <span class="accent">changes the rules</span>
+            </h1>
+
+            <p class="p">
+              Professional crypto trader focused on <b>Bitcoin (BTC)</b> and <b>Ethereum (ETH)</b>.
+              Structured execution, disciplined risk management, and 500+ students trained.
+            </p>
+
+            <div class="hero__stats">
+              <div class="pill">
+                <div class="pill__top">$5,000,000</div>
+                <div class="pill__bot">Capital Base</div>
+              </div>
+              <div class="pill">
+                <div class="pill__top">500+</div>
+                <div class="pill__bot">Students</div>
+              </div>
+              <div class="pill">
+                <div class="pill__top">BTC / ETH</div>
+                <div class="pill__bot">Primary Markets</div>
+              </div>
+            </div>
+
+            <div class="hero__cta">
+              <a class="btn" href="#pricing">Choose a Plan</a>
+              <a class="btn btn--ghost" href="#contact">Join Telegram</a>
+            </div>
+
+            <div class="note">
+              Trading involves risk. Past performance does not guarantee future results. Educational content only.
+            </div>
+          </div>
+
+          <div class="hero__right">
+            <div class="bars" aria-hidden="true">
+              <span class="bar b1"></span><span class="bar b2"></span><span class="bar b3"></span>
+              <span class="bar b4"></span><span class="bar b5"></span><span class="bar b6"></span>
+              <span class="bar b7"></span><span class="bar b8"></span><span class="bar b9"></span>
+            </div>
+
+            <div class="portrait">
+              <img src="/IMG/1.png" alt="Abdulloh Trader portrait" />
+              <div class="portrait__tag">
+                <div class="portrait__name">Abdulloh Trader</div>
+                <div class="portrait__role">BTC/ETH Trader • Mentor</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE STATS -->
+    <section class="section" id="performance">
+      <div class="container">
+        <h2 class="h2">Proven Track Record</h2>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-value">87.3%</div>
+            <div class="stat-label">Win Rate</div>
+            <div class="stat-detail">Consistent profit trades</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-value">$2.4M</div>
+            <div class="stat-label">Total Profit</div>
+            <div class="stat-detail">2023-2025 period</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">📈</div>
+            <div class="stat-value">156%</div>
+            <div class="stat-label">Avg ROI</div>
+            <div class="stat-detail">Per 6-month cycle</div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-value">500+</div>
+            <div class="stat-label">Students</div>
+            <div class="stat-detail">Active learners</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUCCESS STORIES -->
+    <section class="section" id="stories">
+      <div class="container">
+        <h2 class="h2">Student Success Stories</h2>
+        
+        <div class="stories-grid" id="storiesGrid">
+          <!-- Stories will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAT -->
+    <section class="section" id="format">
+      <div class="container">
+        <h2 class="h2">Education Format</h2>
+
+        <div class="grid2">
+          <div class="card card--icon">
+            <div class="icon">📚</div>
+            <div>
+              <div class="card__title orange">Methodical materials</div>
+              <div class="card__text">
+                Structured text guides that cover everything needed for BTC/ETH trading:
+                market structure, liquidity, risk, entries, invalidation.
+              </div>
+            </div>
+            <div class="card__corner">↗</div>
+          </div>
+
+          <div class="card card--icon">
+            <div class="icon">▶</div>
+            <div>
+              <div class="card__title pink">Video lessons</div>
+              <div class="card__text">
+                Detailed breakdown of each topic with real chart examples and execution logic.
+              </div>
+            </div>
+            <div class="card__corner">↗</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING (3 PLANS) -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <h2 class="h2">Available Plans</h2>
+
+        <div class="pricing">
+          <!-- BASIC PLAN -->
+          <div class="plan">
+            <div class="plan__name green">Basic</div>
+            <div class="plan__price">$399</div>
+            <button class="plan__btn plan__btn--disabled" disabled>Not available</button>
+
+            <div class="plan__row">
+              <div>Live sessions</div>
+              <div class="right">8</div>
+            </div>
+            <div class="barline"><span style="width:25%"></span></div>
+
+            <div class="plan__row">
+              <div>Community access</div>
+              <div class="right">30 days</div>
+            </div>
+            <div class="barline"><span style="width:35%"></span></div>
+
+            <div class="plan__check">Video lessons <span class="ok">✓</span></div>
+            <div class="plan__check">Text materials <span class="ok">✓</span></div>
+            
+            <div class="plan__guarantee">
+              <div class="guarantee-icon">🛡️</div>
+              <div class="guarantee-text">30-day money-back guarantee</div>
+            </div>
+          </div>
+
+          <!-- ADVANCED PLAN -->
+          <div class="plan plan--primary">
+            <div class="plan__name blue">Advanced</div>
+            <div class="plan__price">$799</div>
+            <button class="plan__btn">Pay / Apply</button>
+
+            <div class="plan__row">
+              <div>Live sessions</div>
+              <div class="right">36</div>
+            </div>
+            <div class="barline"><span style="width:80%"></span></div>
+
+            <div class="plan__row">
+              <div>Community access</div>
+              <div class="right">90 days</div>
+            </div>
+            <div class="barline"><span style="width:75%"></span></div>
+
+            <div class="plan__check">Video lessons <span class="ok">✓</span></div>
+            <div class="plan__check">Text materials <span class="ok">✓</span></div>
+            <div class="plan__check">24/7 support <span class="ok">✓</span></div>
+            <div class="plan__check">Homework review <span class="ok">✓</span></div>
+            <div class="plan__check">BTC/ETH pairs analytics <span class="ok">✓</span></div>
+            
+            <div class="plan__guarantee">
+              <div class="guarantee-icon">🛡️</div>
+              <div class="guarantee-text">60-day money-back guarantee</div>
+            </div>
+          </div>
+
+          <!-- PREMIUM PLAN -->
+          <div class="plan plan--premium">
+            <div class="plan__badge">⭐ Most Popular</div>
+            <div class="plan__name pink">Premium</div>
+            <div class="plan__price">$1,499</div>
+            <button class="plan__btn plan__btn--premium">Pay / Apply</button>
+
+            <div class="plan__row">
+              <div>Live sessions</div>
+              <div class="right">Unlimited</div>
+            </div>
+            <div class="barline"><span style="width:100%"></span></div>
+
+            <div class="plan__row">
+              <div>Community access</div>
+              <div class="right">Lifetime</div>
+            </div>
+            <div class="barline"><span style="width:100%"></span></div>
+
+            <div class="plan__check">Video lessons <span class="ok">✓</span></div>
+            <div class="plan__check">Text materials <span class="ok">✓</span></div>
+            <div class="plan__check">24/7 support <span class="ok">✓</span></div>
+            <div class="plan__check">Homework review <span class="ok">✓</span></div>
+            <div class="plan__check">BTC/ETH pairs analytics <span class="ok">✓</span></div>
+            <div class="plan__check">1-on-1 mentorship <span class="ok">✓</span></div>
+            <div class="plan__check">Trade journal review <span class="ok">✓</span></div>
+            <div class="plan__check">Priority support <span class="ok">✓</span></div>
+            
+            <div class="plan__guarantee">
+              <div class="guarantee-icon">🛡️</div>
+              <div class="guarantee-text">90-day money-back guarantee</div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </section>
+
+    <!-- REVIEWS (yours: localStorage) -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="headRow">
+          <h2 class="h2">Reviews</h2>
+          <div class="rateBox">
+            <div class="rateBox__top"><span id="avgRating">—</span> <span id="avgStars" class="stars">★★★★★</span></div>
+            <div class="rateBox__bot"><span id="totalReviews">0</span> <span class="totalReviewsLabel">total reviews</span></div>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <div class="card__title">Latest Reviews</div>
+            <div id="reviewsList" class="reviewsList"></div>
+            <div id="loadMoreContainer" style="display:none;margin-top:16px">
+              <button id="loadMoreBtn" class="btn btn--sm" style="width:100%">Load More Reviews</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Leave a Review</div>
+            <form id="reviewForm" class="form">
+              <label class="reviewFormLabel">
+                <span class="labelText">Full Name *</span>
+                <input name="name" required minlength="2" placeholder="Your name" />
+              </label>
+
+              <label class="reviewFormLabel">
+                <span class="labelText">Telegram (optional)</span>
+                <input name="handle" placeholder="@username" />
+              </label>
+
+              <div class="field">
+                <div class="label">Your Rating *</div>
+                <div class="starInput" id="starInput"></div>
+                <input type="hidden" name="rating" id="rating" value="5" />
+              </div>
+
+              <label class="reviewFormLabel">
+                <span class="labelText">Your Feedback * (min 20 chars)</span>
+                <textarea name="text" required minlength="20" placeholder="Write your experience..."></textarea>
+              </label>
+
+              <label class="check">
+                <input type="checkbox" name="proof" />
+                <span class="checkText">I'm a student/client</span>
+              </label>
+
+              <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" />
+
+              <button class="btn" type="submit">Submit</button>
+              <div id="reviewMsg" class="mini"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (Sancho-like accordion) -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="h2">Frequently Asked Questions</h2>
+
+        <div class="faq">
+          <div class="faqItem open">
+            <button class="faqQ">
+              <span>How do I get access after payment?</span>
+              <span class="faqBtn">—</span>
+            </button>
+            <div class="faqA">
+              After payment you fill a short form, then you receive login credentials and access to materials,
+              plus Telegram community & live sessions schedule.
+            </div>
+          </div>
+
+          <div class="faqItem">
+            <button class="faqQ">
+              <span>Who is this education for?</span>
+              <span class="faqBtn">+</span>
+            </button>
+            <div class="faqA">
+              For traders who want a structured BTC/ETH system: risk control, market structure, execution logic, and review.
+            </div>
+          </div>
+
+          <div class="faqItem">
+            <button class="faqQ">
+              <span>Do you guarantee profits?</span>
+              <span class="faqBtn">+</span>
+            </button>
+            <div class="faqA">
+              No. Trading has risk. The program teaches process, discipline, and risk management — not profit promises.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="h2">Contacts</h2>
+        <div class="grid2">
+          <div class="card">
+            <div class="card__title">Media</div>
+            <div class="links">
+              <a class="link" href="#">Telegram</a>
+              <a class="link" href="#">YouTube</a>
+              <a class="link" href="#">Instagram</a>
+            </div>
+            <div class="mini">Replace links with real ones.</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Message</div>
+            <div class="mini">We can connect this to Telegram bot later.</div>
+            <form class="form" onsubmit="return false;">
+              <label class="reviewFormLabel">
+                <span class="labelText">Name</span>
+                <input name="contact_name" placeholder="Your name" />
+              </label>
+              <label class="reviewFormLabel">
+                <span class="labelText">Telegram</span>
+                <input name="contact_telegram" placeholder="@username" />
+              </label>
+              <label class="reviewFormLabel">
+                <span class="labelText">Message</span>
+                <textarea name="contact_message" placeholder="Write your request..."></textarea>
+              </label>
+              <button class="btn" type="button">Send</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer">© Abdulloh Trader, 2026 • Educational only • Not financial advice</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
