@@ -300,7 +300,7 @@ main{
   align-items:center;
   justify-content:center;
   filter:drop-shadow(0 0 30px rgba(127,178,255,.4));
-  animation:float 15s ease-in-out infinite;
+ 
   text-shadow:0 0 20px rgba(127,178,255,.3)
 }
 
